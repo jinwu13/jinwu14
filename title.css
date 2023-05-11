@@ -1,0 +1,185 @@
+/* 타이틀영역 */
+div#title{
+    height: 600px;
+    border: 1px solid red;
+    /*! display: flex; */
+    /*! flex-direction: column; */
+    /*! justify-content: center; */
+    /*! align-items: center; */
+    background-image: url(../img/title.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 73%;
+    background-attachment: fixed;
+    position: relative;
+  }
+  div#title::before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 240px solid rgba(0,212,222,0.6);
+    border-right-width: 390px;
+    border-left-width: 390px;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+div#title .wlist{
+  height: 85%;
+  z-index: 3;
+}
+.wlist .slick-dots {
+  transform: translateY(-30px);
+}
+.wlist .slick-dots li button::before{
+  font-size: 20px;
+  transition:all 0.5s;
+  opacity:1;
+}
+
+
+.wlist .slick-dots li.slick-active button::before{
+ transform: scale(1.5);
+  color: gold;
+}
+div#title .wlist .slick-prev{
+  
+  left: 25px;
+  z-index: 1;
+}
+div#title .wlist .slick-next{
+  
+  right: 25px;
+}
+#title .wlist .list{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 600px;
+}
+  div#title h2{
+    margin-bottom: 11px;
+    animation-name: textup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes textup{
+    0%{
+      transform:scale(1) translateY(0);
+      opacity: 0;
+    }
+    50%{
+      transform: scale(1.2) translateY(calc(50px / 2));
+    }
+    100%{
+      transform:scale(1) translateY(0px);
+      opacity: 1;
+    }
+  }
+  div#title h2 span{
+  }
+  div#title span.control{
+  left: 53%;
+  bottom: -8px;
+  }
+  div#title h2::after{
+    content: "";
+    width: 2px;
+    height: 60px;
+    display: block;
+    background-color: #666;
+   margin: 0 auto;
+    margin-top: 14px;
+  }
+  div#title p{
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    position: relative;
+    top: -16px;
+    animation-name: textup;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    opacity: 0;
+  }
+  div#title a{
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s;
+    z-index: 1;
+    animation-name: textup;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    /*! animation-iteration-count: infinite; */
+    /*! animation-direction: alternate; */
+    margin: 0 auto;
+  }
+  div#title a:hover{
+    background-color: orange;
+  }
+  div#title a::before{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border: 50px solid green;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: green;
+    border-left-color: transparent;
+    position: absolute;
+    top: -70px;
+    left: 0;
+    border-bottom-width: 20px;
+    transition: all 1s;
+  }
+  div#title a:hover::before{
+    border-bottom-color: orange;
+  }
+  div#title a::after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border: 50px solid green;
+    border-top-color: green;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border-top-width: 20px;
+    transition: all 1s;
+  }
+  div#title a:hover::after{
+    border-top-color: orange;
+  }
+  div#title::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 240px solid rgba(0,212,222,0.6);
+    border-right-width: 690px;
+    border-left-width: 690px;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: 0.3;
+  }
